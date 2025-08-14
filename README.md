@@ -2,6 +2,10 @@
 - Running GPT-OSS-20B on Windows, with an RTX 4090, requiring ~ 14 GB VRAM
 - Weights are FP4, but rapidly de-quantized on-the-fly for computations in BF16
 - How fast? 5-10 tokens/second, probably. Faster than you read, most likely.
+- 🆕: `formatted-inference-120b.py` -> `device_map="cuda"` to run.
+- Works with 24 GB VRAM + 128 GB GB RAM. Needs <70 GB total dedicated + shared 'GPU' memory.
+- Turn on 'System Memory Fallback' in NVIDIA settings to use!
+- RTX 4090: About 2 tokens per second for GPT-OSS 120B.
 
 ## Usage
 - Unformatted, raw, simple; streaming tokens:
